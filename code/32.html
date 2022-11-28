@@ -1,0 +1,10 @@
+<div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4">#!/bin/bash</span>
+
+<span style="color: #ff79c6">for</span> file <span style="color: #ff79c6">in</span> ./*
+<span style="color: #ff79c6">do</span>
+    <span style="color: #ff79c6">if</span> <span style="color: #ff79c6">[</span> -d <span style="color: #bd93f9">&quot;</span><span style="color: #8be9fd; font-style: italic">$file</span><span style="color: #bd93f9">&quot;</span> <span style="color: #ff79c6">]</span>
+    <span style="color: #ff79c6">then</span>
+        <span style="color: #8be9fd; font-style: italic">echo</span> <span style="color: #8be9fd; font-style: italic">$file</span>
+    <span style="color: #ff79c6">fi</span>
+<span style="color: #ff79c6">done</span>
+</pre></div>
