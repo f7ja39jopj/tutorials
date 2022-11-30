@@ -1,10 +1,24 @@
-<div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4">#!/bin/bash</span>
+<div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># show tags</span>
+git tag
 
-<span style="color: #ff79c6">for</span> file <span style="color: #ff79c6">in</span> ./*
-<span style="color: #ff79c6">do</span>
-    <span style="color: #ff79c6">if</span> <span style="color: #ff79c6">[</span> -d <span style="color: #bd93f9">&quot;</span><span style="color: #8be9fd; font-style: italic">$file</span><span style="color: #bd93f9">&quot;</span> <span style="color: #ff79c6">]</span>
-    <span style="color: #ff79c6">then</span>
-        <span style="color: #8be9fd; font-style: italic">echo</span> <span style="color: #8be9fd; font-style: italic">$file</span>
-    <span style="color: #ff79c6">fi</span>
-<span style="color: #ff79c6">done</span>
+<span style="color: #6272a4"># create lightweight</span>
+git tag <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># create annotated tag</span>
+git tag -a -m <span style="color: #bd93f9">&quot;&quot;</span> <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># show tagged commit</span>
+git show <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># delete tag</span>
+git tag -d <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># create annotated (lightweight) tag later</span>
+git tag -a -m <span style="color: #bd93f9">&quot;&quot;</span> <span style="color: #ffb86c">0</span>.0.1 commit_checksum
+
+<span style="color: #6272a4"># push one tag</span>
+git push origin <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># push all tags</span>
+git push origin --tags
 </pre></div>

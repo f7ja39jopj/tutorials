@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorials</title>
+    <link href="../../styles.css" rel="stylesheet">
+</head>
+<body><div  class="nav"><div  class="nav-grid"><div ><a  href="../../index.html">level 1</a></div><div ><span >vcs</span></div><div ></div><div ><a  href="../../level/0/3.html">level 2</a></div><div ><span >git</span></div><div ></div></div></div><div  class="main"><div  class="toc"><a  href="#tutorial-1">1. Common</a><a  href="#tutorial-2">2. Status</a><a  href="#tutorial-3">3. Diff</a><a  href="#tutorial-4">4. Commit</a><a  href="#tutorial-5">5. Remove</a><a  href="#tutorial-6">6. Rename</a><a  href="#tutorial-7">7. Log</a><a  href="#tutorial-8">8. Undoing things</a><a  href="#tutorial-9">9. Remote</a><a  href="#tutorial-10">10. Fetch</a><a  href="#tutorial-11">11. Pull</a><a  href="#tutorial-12">12. Push</a><a  href="#tutorial-13">13. Tag</a><a  href="#tutorial-14">14. Alias</a><a  href="#tutorial-15">15. Branch</a><a  href="#tutorial-16">16. Merge</a><a  href="#tutorial-17">17. Rebase</a><a  href="#tutorial-18">18. Reset</a><a  href="#tutorial-19">19. Revert</a></div><div  id="tutorial-1" class="tutorial"><h1 >1. Common</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git --version
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git <span style="color: #8be9fd; font-style: italic">help</span> config
+
+<span style="color: #6272a4"># all</span>
+git <span style="color: #8be9fd; font-style: italic">help</span> -a
+
+<span style="color: #6272a4"># guide</span>
+git <span style="color: #8be9fd; font-style: italic">help</span> -g
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git config --list
+
+git config --global user.name <span style="color: #bd93f9">&quot;Name Surname&quot;</span>
+git config --global user.email <span style="color: #bd93f9">&quot;name.surname@gmail.com&quot;</span>
+git config --global code.editor nano
+
+git config --system user.name
+git config --global user.name
+git config --local user.name
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># Create repository in existing directory.</span>
+git init
+
+<span style="color: #6272a4"># Clone an existing repository.</span>
+git clone https://aaa@bitbucket.org/aaa/git-tutorial.git
+</pre></div>
+</div></div></div><div  id="tutorial-2" class="tutorial"><h1 >2. Status</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git status
+git status --short
+
+<span style="color: #6272a4"># ?? - new file created</span>
+<span style="color: #6272a4"># A_ - new file created and staged</span>
+<span style="color: #6272a4"># AM - new file created, staged and then modified</span>
+<span style="color: #6272a4"># M_ - modified and staged</span>
+<span style="color: #6272a4"># MM - modified, staged and then modified</span>
+<span style="color: #6272a4"># _M - modified and not staged</span>
+<span style="color: #6272a4"># _D - file deleted</span>
+<span style="color: #6272a4"># D_ - file deleted and staged</span>
+<span style="color: #6272a4"># R_ - file renamed and staged</span>
+<span style="color: #6272a4"># UU - merge conflict</span>
+</pre></div>
+</div></div></div><div  id="tutorial-3" class="tutorial"><h1 >3. Diff</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># for _M</span>
+git diff
+
+<span style="color: #6272a4"># for M_</span>
+git diff --staged
+</pre></div>
+</div></div></div><div  id="tutorial-4" class="tutorial"><h1 >4. Commit</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git commit -m <span style="color: #bd93f9">&quot;Commit message&quot;</span>
+
+<span style="color: #6272a4"># for skipping staging area</span>
+git commit -a -m <span style="color: #bd93f9">&quot;Commit message&quot;</span>
+</pre></div>
+</div></div></div><div  id="tutorial-5" class="tutorial"><h1 >5. Remove</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># removed and staged</span>
+git rm file_name
+
+<span style="color: #6272a4"># removed and staged, also untracked</span>
+git rm --cached file_name
+
+<span style="color: #6272a4"># removed and staged (modified files)</span>
+git rm -f file_name
+</pre></div>
+</div></div></div><div  id="tutorial-6" class="tutorial"><h1 >6. Rename</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git mv file_name new_file_name
+</pre></div>
+</div></div></div><div  id="tutorial-7" class="tutorial"><h1 >7. Log</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git log
+
+<span style="color: #6272a4"># last two entries</span>
+git log -2
+
+<span style="color: #6272a4"># with diff</span>
+git log -p
+
+<span style="color: #6272a4"># with diff</span>
+git log --stat
+
+git log --pretty<span style="color: #ff79c6">=</span>oneline
+
+git log --pretty<span style="color: #ff79c6">=</span>format:<span style="color: #bd93f9">&quot;%h %an %ar %s&quot;</span>
+
+git log --pretty<span style="color: #ff79c6">=</span>format:<span style="color: #bd93f9">&quot;%h %s&quot;</span> --graph
+
+git log --since<span style="color: #ff79c6">=</span><span style="color: #ffb86c">1</span>.hour
+</pre></div>
+</div></div></div><div  id="tutorial-8" class="tutorial"><h1 >8. Undoing things</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># change commit message or add changes to the last commit</span>
+git commit --amend
+</pre></div>
+</div><div  class="admonition"><div  class="admonition-header">Warning</div><div  class="admonition-body">Do not do this after git push</div></div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># unstage changes</span>
+git reset HEAD file_name
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># remove all changes from working directory</span>
+git checkout -- file_name
+</pre></div>
+</div><div  class="admonition"><div  class="admonition-header">Warning</div><div  class="admonition-body">Not recoverable operation</div></div></div></div><div  id="tutorial-9" class="tutorial"><h1 >9. Remote</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># show remotes</span>
+git remote
+
+<span style="color: #6272a4"># show remotes and URL?s</span>
+git remote -v
+
+<span style="color: #6272a4"># add remote</span>
+git remote add remote_name remote_url
+
+<span style="color: #6272a4"># show more info</span>
+git remote show origin
+
+<span style="color: #6272a4"># rename remote</span>
+git remote rename old_remote_name new_remote_name
+
+git remote rm remote_name
+</pre></div>
+</div></div></div><div  id="tutorial-10" class="tutorial"><h1 >10. Fetch</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git fetch remote_name
+</pre></div>
+</div></div></div><div  id="tutorial-11" class="tutorial"><h1 >11. Pull</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># fetch and merge</span>
+git pull
+</pre></div>
+</div></div></div><div  id="tutorial-12" class="tutorial"><h1 >12. Push</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git push origin master
+</pre></div>
+</div></div></div><div  id="tutorial-13" class="tutorial"><h1 >13. Tag</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># show tags</span>
+git tag
+
+<span style="color: #6272a4"># create lightweight</span>
+git tag <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># create annotated tag</span>
+git tag -a -m <span style="color: #bd93f9">&quot;&quot;</span> <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># show tagged commit</span>
+git show <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># delete tag</span>
+git tag -d <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># create annotated (lightweight) tag later</span>
+git tag -a -m <span style="color: #bd93f9">&quot;&quot;</span> <span style="color: #ffb86c">0</span>.0.1 commit_checksum
+
+<span style="color: #6272a4"># push one tag</span>
+git push origin <span style="color: #ffb86c">0</span>.0.1
+
+<span style="color: #6272a4"># push all tags</span>
+git push origin --tags
+</pre></div>
+</div></div></div><div  id="tutorial-14" class="tutorial"><h1 >14. Alias</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git config --global alias.st <span style="color: #bd93f9">&quot;status --short&quot;</span>
+</pre></div>
+</div></div></div><div  id="tutorial-15" class="tutorial"><h1 >15. Branch</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># show branches</span>
+git branch
+
+<span style="color: #6272a4"># create new branch</span>
+git branch new_branch
+
+<span style="color: #6272a4"># switch branch</span>
+git checkout new_branch
+
+<span style="color: #6272a4"># craete new branch and switch to it</span>
+git checkout -b new_branch
+
+<span style="color: #6272a4"># show text tree</span>
+git log --oneline --decorate --graph --all
+
+<span style="color: #6272a4"># show last commit on each branch</span>
+git branch -v
+
+<span style="color: #6272a4"># show last commit on each branch and track</span>
+git branch -vv
+
+<span style="color: #6272a4"># delete remote branch</span>
+git push origin --delete branch
+</pre></div>
+</div></div></div><div  id="tutorial-16" class="tutorial"><h1 >16. Merge</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git checkout master
+git merge new_branch     <span style="color: #6272a4"># Merge new_branch on master</span>
+git branch -d new_branch <span style="color: #6272a4"># Delete branch</span>
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># In case of merge conflict after...</span>
+git checkout master
+git merge new_branch
+<span style="color: #6272a4"># ... resolve conflicts</span>
+git add
+git commit -m <span style="color: #bd93f9">&quot;Merge.&quot;</span>
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git branch --merged    <span style="color: #6272a4"># show merged branches</span>
+git branch --no-merged <span style="color: #6272a4"># show not merged branches</span>
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git checkout -b new_branch origin/master <span style="color: #6272a4"># track origin/master on new_branch</span>
+git branch --track origin/master         <span style="color: #6272a4"># create master branch and track it</span>
+git branch -u origin/master              <span style="color: #6272a4"># set track on existing branch</span>
+</pre></div>
+</div></div></div><div  id="tutorial-17" class="tutorial"><h1 >17. Rebase</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># rebase</span>
+git checkout new_branch
+git rebase master
+
+<span style="color: #6272a4"># merge</span>
+git checkout master
+git merge new_branch
+
+<span style="color: #6272a4"># delete merged branch</span>
+git branch -d new_branch
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git rebase --onto master server client
+
+git checkout master
+git merge client
+
+git rebase master server
+
+git checkout master
+git merge server
+
+git branch -d client
+git branch -d server
+</pre></div>
+</div></div></div><div  id="tutorial-18" class="tutorial"><h1 >18. Reset</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># Staging area: c.txt.</span>
+<span style="color: #6272a4"># Working directory: all files.</span>
+<span style="color: #6272a4"># Untracked area: empty.</span>
+git reset --soft HEAD~
+
+<span style="color: #6272a4"># Staging area: empty.</span>
+<span style="color: #6272a4"># Working directory: all files.</span>
+<span style="color: #6272a4"># Untracked area: c.txt.</span>
+git reset --mixed HEAD~
+
+<span style="color: #6272a4"># Staging area: empty.</span>
+<span style="color: #6272a4"># Working directory: a.txt, b.txt.</span>
+<span style="color: #6272a4"># Untracked area: empty.</span>
+git reset --mixed HEAD~
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># Staging area: c.txt, b.txt.</span>
+<span style="color: #6272a4"># Working directory: all files.</span>
+<span style="color: #6272a4"># Untracked area: empty.</span>
+git reset --soft HEAD~2
+
+<span style="color: #6272a4"># Staging area: empty.</span>
+<span style="color: #6272a4"># Working directory: all files.</span>
+<span style="color: #6272a4"># Untracked area: c.txt, b.txt.</span>
+git reset --mixed HEAD~
+
+<span style="color: #6272a4"># Staging area: empty.</span>
+<span style="color: #6272a4"># Working directory: a.txt.</span>
+<span style="color: #6272a4"># Untracked area: empty.</span>
+git reset --mixed HEAD~
+</pre></div>
+</div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># Restore after reset.</span>
+<span style="color: #6272a4"># Show changes list.</span>
+git reflog
+git reset HEAD@<span style="color: #ff79c6">{</span>N<span style="color: #ff79c6">}</span>
+
+<span style="color: #6272a4"># Show changes list on selected branch.</span>
+git reflog show master
+</pre></div>
+</div></div></div><div  id="tutorial-19" class="tutorial"><h1 >19. Revert</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4"># Revert the very last commit.</span>
+git revert HEAD
+</pre></div>
+</div></div></div></div></body>
+</html>

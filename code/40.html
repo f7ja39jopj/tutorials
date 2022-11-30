@@ -1,0 +1,13 @@
+<div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git rebase --onto master server client
+
+git checkout master
+git merge client
+
+git rebase master server
+
+git checkout master
+git merge server
+
+git branch -d client
+git branch -d server
+</pre></div>

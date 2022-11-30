@@ -1,2 +1,19 @@
-<div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">danger</span><span style="color: #f8f8f2">::</span> Danger text
+<div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>git log
+
+<span style="color: #6272a4"># last two entries</span>
+git log -2
+
+<span style="color: #6272a4"># with diff</span>
+git log -p
+
+<span style="color: #6272a4"># with diff</span>
+git log --stat
+
+git log --pretty<span style="color: #ff79c6">=</span>oneline
+
+git log --pretty<span style="color: #ff79c6">=</span>format:<span style="color: #bd93f9">&quot;%h %an %ar %s&quot;</span>
+
+git log --pretty<span style="color: #ff79c6">=</span>format:<span style="color: #bd93f9">&quot;%h %s&quot;</span> --graph
+
+git log --since<span style="color: #ff79c6">=</span><span style="color: #ffb86c">1</span>.hour
 </pre></div>

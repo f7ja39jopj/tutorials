@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorials</title>
+    <link href="../../styles.css" rel="stylesheet">
+</head>
+<body><div  class="nav"><div  class="nav-grid"><div ><a  href="../../index.html">level 1</a></div><div ><span >os</span></div><div ></div><div ><a  href="../../level/0/2.html">level 2</a></div><div ><span >bash</span></div><div ></div></div></div><div  class="main"><div  class="toc"><a  href="#tutorial-1">1. List all directories</a></div><div  id="tutorial-1" class="tutorial"><h1 >1. List all directories</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4">#!/bin/bash</span>
+
+<span style="color: #ff79c6">for</span> file <span style="color: #ff79c6">in</span> ./*
+<span style="color: #ff79c6">do</span>
+    <span style="color: #ff79c6">if</span> <span style="color: #ff79c6">[</span> -d <span style="color: #bd93f9">&quot;</span><span style="color: #8be9fd; font-style: italic">$file</span><span style="color: #bd93f9">&quot;</span> <span style="color: #ff79c6">]</span>
+    <span style="color: #ff79c6">then</span>
+        <span style="color: #8be9fd; font-style: italic">echo</span> <span style="color: #8be9fd; font-style: italic">$file</span>
+    <span style="color: #ff79c6">fi</span>
+<span style="color: #ff79c6">done</span>
+</pre></div>
+</div></div></div></div></body>
+</html>

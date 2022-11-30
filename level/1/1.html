@@ -6,33 +6,33 @@
     <title>Tutorials</title>
     <link href="../../styles.css" rel="stylesheet">
 </head>
-<body><div  class="nav"><div  class="nav-grid"><div ><a  href="../../index.html">level 1</a></div><div ><span >doc tools</span></div><div ></div><div ><a  href="../../level/0/1.html">level 2</a></div><div ><span >sphinx</span></div><div ></div></div></div><div  class="main"><div  class="toc"><a  href="#tutorial-1">1. Install</a><a  href="#tutorial-2">2. Create documentation project</a><a  href="#tutorial-3">3. Configuration</a><a  href="#tutorial-4">4. Generate html output</a><a  href="#tutorial-5">5. Document structure</a><a  href="#tutorial-6">6. How to create TOC</a><a  href="#tutorial-7">7. Content formatting</a><a  href="#tutorial-8">8. Admonition</a><a  href="#tutorial-9">9. Image</a><a  href="#tutorial-10">10. Credit</a></div><div  id="tutorial-1" class="tutorial"><h1 >1. Install</h1><div  class="step"><h2 >1. Run this code in command line</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>python -m pip install sphinx sphinx-autobuild
+<body><div  class="nav"><div  class="nav-grid"><div ><a  href="../../index.html">level 1</a></div><div ><span >doc tools</span></div><div ></div><div ><a  href="../../level/0/1.html">level 2</a></div><div ><span >sphinx</span></div><div ></div></div></div><div  class="main"><div  class="toc"><a  href="#tutorial-1">1. Install</a><a  href="#tutorial-2">2. Create documentation project</a><a  href="#tutorial-3">3. Configuration</a><a  href="#tutorial-4">4. Generate html output</a><a  href="#tutorial-5">5. Document structure</a><a  href="#tutorial-6">6. Create TOC</a><a  href="#tutorial-7">7. Text Formatting</a><a  href="#tutorial-8">8. Hyperlink</a><a  href="#tutorial-9">9. Code</a><a  href="#tutorial-10">10. Admonition</a><a  href="#tutorial-11">11. Image</a><a  href="#tutorial-12">12. Credit</a></div><div  id="tutorial-1" class="tutorial"><h1 >1. Install</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>python -m pip install sphinx sphinx-autobuild
 python -m pip install sphinx_rtd_theme
 </pre></div>
-</div></div></div><div  id="tutorial-2" class="tutorial"><h1 >2. Create documentation project</h1><div  class="step"><h2 >1. Run this code in command line</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>sphinx-quickstart
+</div></div></div><div  id="tutorial-2" class="tutorial"><h1 >2. Create documentation project</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>sphinx-quickstart
 
-Root path <span style="color: #ff79c6">for</span> the documentation <span style="color: #ff79c6">[</span>.<span style="color: #ff79c6">]</span>:
-Separate <span style="color: #8be9fd; font-style: italic">source</span> and build directories <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>: y
-Name prefix <span style="color: #ff79c6">for</span> templates and static dir <span style="color: #ff79c6">[</span>_<span style="color: #ff79c6">]</span>: n
-Project name: documentation
-Author name<span style="color: #ff79c6">(</span>s<span style="color: #ff79c6">)</span>: f7ja39jopj
-Project version: <span style="color: #ffb86c">0</span>.0.1
-Project release <span style="color: #ff79c6">[</span><span style="color: #ffb86c">0</span>.0.1<span style="color: #ff79c6">]</span>:
-Project language <span style="color: #ff79c6">[</span>en<span style="color: #ff79c6">]</span>:
-Source file suffix <span style="color: #ff79c6">[</span>.rst<span style="color: #ff79c6">]</span>:
-Name of your master document <span style="color: #ff79c6">(</span>without suffix<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>index<span style="color: #ff79c6">]</span>:
-Do you want to use the epub builder <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-autodoc: automatically insert docstrings from modules <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>: y
-doctest: automatically <span style="color: #8be9fd; font-style: italic">test</span> code snippets <span style="color: #ff79c6">in</span> doctest blocks <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-intersphinx: link between Sphinx documentation of different projects <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-todo: write <span style="color: #bd93f9">&quot;todo&quot;</span> entries that can be shown or hidden on build <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-coverage: checks <span style="color: #ff79c6">for</span> documentation coverage <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-pngmath: include math, rendered as PNG images <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-mathjax: include math, rendered <span style="color: #ff79c6">in</span> the browser by MathJax <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-ifconfig: conditional inclusion of content based on config values <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-viewcode: include links to the <span style="color: #8be9fd; font-style: italic">source</span> code of documented Python objects <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>n<span style="color: #ff79c6">]</span>:
-Create Makefile? <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>y<span style="color: #ff79c6">]</span>:
-Create Windows <span style="color: #8be9fd; font-style: italic">command</span> file? <span style="color: #ff79c6">(</span>y/n<span style="color: #ff79c6">)</span> <span style="color: #ff79c6">[</span>y<span style="color: #ff79c6">]</span>:
+<span style="color: #6272a4"># Root path for the documentation [.]:</span>
+<span style="color: #6272a4"># Separate source and build directories (y/n) [n]: y</span>
+<span style="color: #6272a4"># Name prefix for templates and static dir [_]: n</span>
+<span style="color: #6272a4"># Project name: documentation</span>
+<span style="color: #6272a4"># Author name(s): f7ja39jopj</span>
+<span style="color: #6272a4"># Project version: 0.0.1</span>
+<span style="color: #6272a4"># Project release [0.0.1]:</span>
+<span style="color: #6272a4"># Project language [en]:</span>
+<span style="color: #6272a4"># Source file suffix [.rst]:</span>
+<span style="color: #6272a4"># Name of your master document (without suffix) [index]:</span>
+<span style="color: #6272a4"># Do you want to use the epub builder (y/n) [n]:</span>
+<span style="color: #6272a4"># autodoc: automatically insert docstrings from modules (y/n) [n]: y</span>
+<span style="color: #6272a4"># doctest: automatically test code snippets in doctest blocks (y/n) [n]:</span>
+<span style="color: #6272a4"># intersphinx: link between Sphinx documentation of different projects (y/n) [n]:</span>
+<span style="color: #6272a4"># todo: write &quot;todo&quot; entries that can be shown or hidden on build (y/n) [n]:</span>
+<span style="color: #6272a4"># coverage: checks for documentation coverage (y/n) [n]:</span>
+<span style="color: #6272a4"># pngmath: include math, rendered as PNG images (y/n) [n]:</span>
+<span style="color: #6272a4"># mathjax: include math, rendered in the browser by MathJax (y/n) [n]:</span>
+<span style="color: #6272a4"># ifconfig: conditional inclusion of content based on config values (y/n) [n]:</span>
+<span style="color: #6272a4"># viewcode: include links to the source code of documented Python objects (y/n) [n]:</span>
+<span style="color: #6272a4"># Create Makefile? (y/n) [y]:</span>
+<span style="color: #6272a4"># Create Windows command file? (y/n) [y]:</span>
 </pre></div>
 </div></div></div><div  id="tutorial-3" class="tutorial"><h1 >3. Configuration</h1><div  class="step"><h2 >1. Create .gitignore file</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>.idea/
 *~
@@ -41,34 +41,31 @@ build/
 </div></div><div  class="step"><h2 >2. Update conf.py file</h2><div  class="text"><p >Replace</p></div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">html_theme</span> <span style="color: #ff79c6">=</span> <span style="color: #bd93f9">&#39;alabaster&#39;</span>
 </pre></div>
 </div><div  class="text"><p >With</p></div><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #6272a4">#html_theme = &#39;alabaster&#39;</span>
-
 <span style="color: #ff79c6">import</span> <span style="color: #f8f8f2">sphinx_rtd_theme</span>
-
 <span style="color: #f8f8f2">html_theme</span> <span style="color: #ff79c6">=</span> <span style="color: #bd93f9">&quot;sphinx_rtd_theme&quot;</span>
-
 <span style="color: #f8f8f2">html_theme_path</span> <span style="color: #ff79c6">=</span> <span style="color: #f8f8f2">[sphinx_rtd_theme</span><span style="color: #ff79c6">.</span><span style="color: #f8f8f2">get_html_theme_path()]</span>
 </pre></div>
-</div></div></div><div  id="tutorial-4" class="tutorial"><h1 >4. Generate html output</h1><div  class="step"><h2 >1. Run this code in command line</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>make html
+</div></div></div><div  id="tutorial-4" class="tutorial"><h1 >4. Generate html output</h1><div  class="step"><h2 >1. Commands</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>make html
 </pre></div>
-</div></div></div><div  id="tutorial-5" class="tutorial"><h1 >5. Document structure</h1><div  class="step"><h2 >1. Part</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Part</span>
+</div></div></div><div  id="tutorial-5" class="tutorial"><h1 >5. Document structure</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Part</span>
 <span style="color: #f8f8f2; font-weight: bold">####</span>
-</pre></div>
-</div></div><div  class="step"><h2 >2. Chapter</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Chapter</span>
+
+<span style="color: #f8f8f2; font-weight: bold">Chapter</span>
 <span style="color: #f8f8f2; font-weight: bold">*******</span>
-</pre></div>
-</div></div><div  class="step"><h2 >3. Section</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Section</span>
+
+<span style="color: #f8f8f2; font-weight: bold">Section</span>
 <span style="color: #f8f8f2; font-weight: bold">=======</span>
-</pre></div>
-</div></div><div  class="step"><h2 >4. Subsection</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Subsection</span>
+
+<span style="color: #f8f8f2; font-weight: bold">Subsection</span>
 <span style="color: #f8f8f2; font-weight: bold">----------</span>
-</pre></div>
-</div></div><div  class="step"><h2 >5. Subsubsection</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Subsubsection</span>
+
+<span style="color: #f8f8f2; font-weight: bold">Subsubsection</span>
 <span style="color: #f8f8f2; font-weight: bold">^^^^^^^^^^^^^</span>
-</pre></div>
-</div></div><div  class="step"><h2 >6. Paragraph</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Paragraph</span>
+
+<span style="color: #f8f8f2; font-weight: bold">Paragraph</span>
 <span style="color: #f8f8f2; font-weight: bold">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
 </pre></div>
-</div></div></div><div  id="tutorial-6" class="tutorial"><h1 >6. How to create TOC</h1><div  class="step"><h2 >1. Create index.rst file</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Title</span>
+</div></div></div><div  id="tutorial-6" class="tutorial"><h1 >6. Create TOC</h1><div  class="step"><h2 >1. Create index.rst file</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; font-weight: bold">Title</span>
 <span style="color: #f8f8f2; font-weight: bold">=====</span>
 
 Contents:
@@ -88,17 +85,16 @@ Contents:
 <span style="color: #ffb86c">*</span> <span style="color: #50fa7b">:ref:</span><span style="color: #8be9fd; font-style: italic">`modindex`</span>
 <span style="color: #ffb86c">*</span> <span style="color: #50fa7b">:ref:</span><span style="color: #8be9fd; font-style: italic">`search`</span>
 </pre></div>
-</div></div></div><div  id="tutorial-7" class="tutorial"><h1 >7. Content formatting</h1><div  class="step"><h2 >1. Bold</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">**bold**</span>
+</div></div></div><div  id="tutorial-7" class="tutorial"><h1 >7. Text Formatting</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">**bold**</span>
+
+<span style="color: #f8f8f2; text-decoration: underline">*italic*</span>
+
+<span style="color: #bd93f9">``monospace``</span>
 </pre></div>
-</div></div><div  class="step"><h2 >2. Italic</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2; text-decoration: underline">*italic*</span>
+</div></div></div><div  id="tutorial-8" class="tutorial"><h1 >8. Hyperlink</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>http://www.google.com/
+<span style="color: #bd93f9">`Text for hyperlink &lt;http://www.google.com/&gt;`_</span>
 </pre></div>
-</div></div><div  class="step"><h2 >3. Monospace</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #bd93f9">``monospace``</span>
-</pre></div>
-</div></div><div  class="step"><h2 >4. Hyperlink</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>http://www.google.com/
-</pre></div>
-</div></div><div  class="step"><h2 >5. Hyperlink with custom text</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #bd93f9">`External hyperlink to Google &lt;http://www.google.com/&gt;`_</span>
-</pre></div>
-</div></div><div  class="step"><h2 >6. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">code-block</span><span style="color: #f8f8f2">::</span> <span style="color: #ff79c6">java</span>
+</div></div></div><div  id="tutorial-9" class="tutorial"><h1 >9. Code</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">code-block</span><span style="color: #f8f8f2">::</span> <span style="color: #ff79c6">java</span>
 
     <span style="color: #8be9fd; font-style: italic">public</span> <span style="color: #8be9fd; font-style: italic">class</span> <span style="color: #50fa7b">Person</span> <span style="color: #f8f8f2">{</span>
         <span style="color: #8be9fd; font-style: italic">private</span> <span style="color: #f8f8f2">String</span> <span style="color: #f8f8f2">name;</span>
@@ -120,31 +116,31 @@ Contents:
             <span style="color: #ff79c6">return</span> <span style="color: #ff79c6">this</span><span style="color: #f8f8f2">.</span><span style="color: #50fa7b">surname</span><span style="color: #f8f8f2">;</span>
         <span style="color: #f8f8f2">}</span>
     <span style="color: #f8f8f2">}</span>
-</pre></div>
-</div></div><div  class="step"><h2 >7. Code from file</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">literalinclude</span><span style="color: #f8f8f2">::</span> code/Person.java
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">literalinclude</span><span style="color: #f8f8f2">::</span> code/Person.java
     <span style="color: #50fa7b">:language:</span> java
     <span style="color: #50fa7b">:linenos:</span>
     <span style="color: #50fa7b">:emphasize-lines:</span> 1, 13-15
 </pre></div>
-</div></div></div><div  id="tutorial-8" class="tutorial"><h1 >8. Admonition</h1><div  class="step"><h2 >1. Attention</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">attention</span><span style="color: #f8f8f2">::</span> Attention text
+</div></div></div><div  id="tutorial-10" class="tutorial"><h1 >10. Admonition</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">attention</span><span style="color: #f8f8f2">::</span> Attention text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">caution</span><span style="color: #f8f8f2">::</span> Caution text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">danger</span><span style="color: #f8f8f2">::</span> Danger text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">error</span><span style="color: #f8f8f2">::</span> Error text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">hint</span><span style="color: #f8f8f2">::</span> Hint text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">important</span><span style="color: #f8f8f2">::</span> Important text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">note</span><span style="color: #f8f8f2">::</span> Note text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">tip</span><span style="color: #f8f8f2">::</span> Tip text
+
+<span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">warning</span><span style="color: #f8f8f2">::</span> Warning text
 </pre></div>
-</div></div><div  class="step"><h2 >2. Caution</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">caution</span><span style="color: #f8f8f2">::</span> Caution text
-</pre></div>
-</div></div><div  class="step"><h2 >3. Danger</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">danger</span><span style="color: #f8f8f2">::</span> Danger text
-</pre></div>
-</div></div><div  class="step"><h2 >4. Error</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">error</span><span style="color: #f8f8f2">::</span> Error text
-</pre></div>
-</div></div><div  class="step"><h2 >5. Hint</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">hint</span><span style="color: #f8f8f2">::</span> Hint text
-</pre></div>
-</div></div><div  class="step"><h2 >6. Important</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">important</span><span style="color: #f8f8f2">::</span> Important text
-</pre></div>
-</div></div><div  class="step"><h2 >7. Note</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">note</span><span style="color: #f8f8f2">::</span> Note text
-</pre></div>
-</div></div><div  class="step"><h2 >8. Tip</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">tip</span><span style="color: #f8f8f2">::</span> Tip text
-</pre></div>
-</div></div><div  class="step"><h2 >9. Warning</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">warning</span><span style="color: #f8f8f2">::</span> Warning text
-</pre></div>
-</div></div></div><div  id="tutorial-9" class="tutorial"><h1 >9. Image</h1><div  class="step"><h2 >1. Image</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>|arrow-right| |arrow-left| |arrow-down| |arrow-up|
+</div></div></div><div  id="tutorial-11" class="tutorial"><h1 >11. Image</h1><div  class="step"><h2 >1. Code</h2><div  class="code"><div class="highlight" style="background: #282a36"><pre style="line-height: 125%;"><span></span>|arrow-right| |arrow-left| |arrow-down| |arrow-up|
 
 <span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">|arrow-right|</span> <span style="color: #ff79c6">image</span><span style="color: #f8f8f2">::</span> images/arrow_right.png
 
@@ -154,5 +150,5 @@ Contents:
 
 <span style="color: #f8f8f2">..</span> <span style="color: #ff79c6">|arrow-up|</span> <span style="color: #ff79c6">image</span><span style="color: #f8f8f2">::</span> images/arrow_up.png
 </pre></div>
-</div></div></div><div  id="tutorial-10" class="tutorial"><h1 >10. Credit</h1><div  class="step"><h2 >1. Credit</h2><div  class="link"><a  href="http://sphinx-doc.org/">http://sphinx-doc.org/</a></div><div  class="link"><a  href="http://www.readthedocs.org/">http://www.readthedocs.org/</a></div><div  class="link"><a  href="https://github.com/snide/sphinx_rtd_theme/">https://github.com/snide/sphinx_rtd_theme/</a></div><div  class="link"><a  href="http://build-me-the-docs-please.readthedocs.io/en/latest/index.html">http://build-me-the-docs-please.readthedocs.io/en/latest/index.html</a></div><div  class="link"><a  href="https://youtu.be/oJsUvBQyHBs">https://youtu.be/oJsUvBQyHBs</a></div><div  class="link"><a  href="http://www.iconsdb.com/">http://www.iconsdb.com/</a></div></div></div></div></body>
+</div></div></div><div  id="tutorial-12" class="tutorial"><h1 >12. Credit</h1><div  class="step"><h2 >1. Code</h2><div  class="link"><a  href="http://sphinx-doc.org/">http://sphinx-doc.org/</a></div><div  class="link"><a  href="http://www.readthedocs.org/">http://www.readthedocs.org/</a></div><div  class="link"><a  href="https://github.com/snide/sphinx_rtd_theme/">https://github.com/snide/sphinx_rtd_theme/</a></div><div  class="link"><a  href="http://build-me-the-docs-please.readthedocs.io/en/latest/index.html">http://build-me-the-docs-please.readthedocs.io/en/latest/index.html</a></div><div  class="link"><a  href="https://youtu.be/oJsUvBQyHBs">https://youtu.be/oJsUvBQyHBs</a></div><div  class="link"><a  href="http://www.iconsdb.com/">http://www.iconsdb.com/</a></div></div></div></div></body>
 </html>
